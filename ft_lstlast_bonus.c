@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 14:35:29 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/06 15:20:27 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:47:59 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,14 @@ t_list *ft_lstlast(t_list *lst)
 {
 	t_list *t;
 
-	t = lst;//creating a new pointer to lst
+//creating a new pointer to lst
+	t = lst;
+	if (!lst)
+		return (NULL);
 	while (t)
 	{
-		if (!(t -> next))//if t -> next doesn't exist return t
+	//if t -> next doesn't exist, return t
+		if (!(t -> next))
 			return (t);
 		t = t -> next;
 	}

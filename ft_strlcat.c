@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:44:12 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:45:58 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,14 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	while (dst[j] && j < dstsize)
 		j++;
 	i = 0;
-	while (src[i] && i + j + 1 < dstsize)//the return value cannot be above dstsize
+//the return value cannot be above dstsize
+	while (src[i] && i + j + 1 < dstsize)
 	{
 		dst[j + i] = src[i];
 		i++;
 	}
 	if (i != 0)
 		dst[i + j] = 0;
-	return (x + j);//returns initial length of dst plus length of src
+//returns initial length of dst plus length of src
+	return (x + j);
 }

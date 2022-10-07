@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:41:11 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/04 19:53:40 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:36:20 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	p = 0;
 	while (p < n)
 	{
+	//whenever s[p]==c, we will return &s[p]
 		if ((((unsigned char *)s)[p]) == (unsigned char) c)
 			return ((unsigned char *)s + p);
 		p++;
 	}
+	//if there's isn't an occurence, return 0
 	return (0);
 }

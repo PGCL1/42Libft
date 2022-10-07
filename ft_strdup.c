@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:11:48 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:47:59 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,12 @@ char	*ft_strdup(const char *s1)
 	unsigned int	len;
 
 	len = ft_strlen((char *)s1);
-	string = (malloc(len * sizeof(char) + 1));//allocating memory for the pointer to s1, memory is allocated for the size of s1 + 1 being the null terminator.
+	//allocating memory for the pointer to s1, memory is allocated for the size of s1 + 1 being the null terminator.
+	string = (malloc((len + 1) * sizeof(char)));
 	if (!string)
 		return (0);
-	ft_memcpy(string, s1, len * sizeof(char));//copies the contents of s1 into string.
+	//copies the contents of s1 into string.
+	ft_memcpy(string, s1, len * sizeof(char));
 	string[len] = 0;
 	return (string);
 }

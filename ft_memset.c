@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:22:49 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/04 19:53:40 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:41:03 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ void	*ft_memset(void *str, int c, size_t n)
 	x = 0;
 	while (x < n)
 	{
-		((unsigned char *)str)[x] = c;//starting from str[x] position are converted to c.
+		//starting from str[x] position are converted to c.
+		((unsigned char *)str)[x] = c;
 		x++;
 	}	
 	return (str);

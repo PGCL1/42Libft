@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:25:31 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/06 19:04:17 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:30:55 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,11 @@ new: The address of a pointer to the node to be added to the list.
 
 void ft_lstadd_front(t_list **lst, t_list *new)
 {
+//if the list doesn't exists, the function returns nothing
 	if (!lst)
 		return ;
+//the node after new takes the content of lst
 	new -> next = *lst;
+//the content of lst is now new
 	*lst = new;
 }

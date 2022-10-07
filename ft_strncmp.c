@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:13:46 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:46:51 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 	while ((st1[i] != '\0' || st2[i] != '\0') && i < n)
 	{
 		if (st1[i] != st2[i])
-			return (st1[i] - st2[i]);//if the strings are different
+	//if the strings are different
+			return (st1[i] - st2[i]);
 		i++;
 	}
-	return (0);//if the strings are identical then the function returns 0
+	//if the strings are identical then the function returns 0
+	return (0);
 }

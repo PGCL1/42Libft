@@ -1,53 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 14:19:55 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:34:50 by glacroix         ###   ########.fr       */
+/*   Created: 2022/10/07 16:12:49 by glacroix          #+#    #+#             */
+/*   Updated: 2022/10/07 22:33:09 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-Description: counts the number of nodes in a list.
+Description: Iterates the list ’lst’ and applies the function ’f’ on the content of each node.
+lst: The address of a pointer to a node.
+f: The address of the function used to iterate on the list.
 */
 
-int	ft_lstsize(t_list *lst)
+void ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	int x;
-
-	x = 0;
+//if the list doesn't exists, the function does nothing
 	if (!lst)
-		return (0);
-	//a non existant node in the list will have a null pointer.
-	while (lst != NULL)
+		return ;
+	while (lst)
 	{
-	//moving through the list
-		lst = lst -> next;
-	//counting the number of nodes in the list
-		x++;
+	//function f is applied to a node of the list
+		(*f)(lst->content);
+	//moving to the next node
+		lst = lst->next;
 	}
-	//number of nodes in the list
-	return(x);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:57:05 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/01 22:07:33 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:44:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 	if (s && fd >= 0)
-		write(fd, s, ft_strlen(s)); //we can write everything with strlen
+	//writing everything with strlen
+		write(fd, s, ft_strlen(s));
 }

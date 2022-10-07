@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:16:10 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:47:59 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strchr(const char *s, int c)
 	while (*s)
 	{
 		if (*s == (const char)c)
-			return ((char *)s);//returns the first occurence of c in the string s starting from the position in s which is equal to char c
+		//returns the first occurence of c in the string s starting from the position in s which is equal to char c
+			return ((char *)s);
 		s++;
 	}
 	if (*s == (const char)c)

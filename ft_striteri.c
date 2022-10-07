@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:08:47 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/01 21:26:04 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:45:19 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@ void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t i;
 	if (!s || !f)
-		return ; //since function type is void return won´t do anything
+	//since function type is void return won´t do anything
+		return ; 
 	i = 0;
 	while (s[i])
 	{
-		(*f)(i, &s[i]); //here passing the adress of each s character to f
+	//here passing the adress of each s character to f
+		(*f)(i, &s[i]); 
 		i++;
 	}
 }

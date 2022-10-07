@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 16:48:13 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/06 16:16:49 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:34:29 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,14 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list *node;
 
-	node = (t_list *)malloc(sizeof(t_list));//creating a new node and allocating memory to it
+	//creating a new node and allocating memory to it
+	node = (t_list *)malloc(sizeof(t_list));
 	if (!node)
 		return (NULL);
-	node -> content = content;//content of the present node
-	node -> next = NULL;//next node is NULL
-	return (node);//returning node
+	//content of the present node
+	node -> content = content;
+	//next node is NULL
+	node -> next = NULL;
+	//returning node
+	return (node);
 }

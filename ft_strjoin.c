@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 16:13:15 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:45:44 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,20 +23,22 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*s3;
 
 	i = 0;
-	s3 = (char *)malloc(sizeof(char) * ((ft_strlen(s1) + ft_strlen(s2) + 2)));
+	s3 = (char *)malloc(sizeof(char) * ((ft_strlen(s1) + ft_strlen(s2) + 1)));
 	if (!s3)
 		return (NULL);
 	while (s1[i] != 0)
 	{
-		s3[i] = s1[i];//copying s1 into s3
+	//copying s1 into s3
+		s3[i] = s1[i];
 		i++;
 	}
 	j = 0;
 	while (s2[j] != 0)
 	{
-		s3[i + j] = s2[j];//copying s2 into s3
+	//copying s2 into s3
+		s3[i + j] = s2[j];
 		j++;
 	}	
 	s3[i + j] = '\0';
-	return (s3);//returning s3
+	return (s3);
 }

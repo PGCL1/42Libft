@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 20:33:45 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/04 19:53:40 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:46:37 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	str = (char *) malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!str || !f)
-		return (NULL);//the allocation would fail if the function f and string s were inexistent 
+	//the allocation would fail if the function f and string s were inexistent 
+		return (NULL);
 	i = 0;
 	while (s[i])
 	{
-		str[i] = f(i, s[i]);//here we assign to each position of s the function f for each character in s
+	//here we assign to each position of s the function f for each character in s
+		str[i] = f(i, s[i]);
 		i++;
 	}
 	str[i] = 0;

@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:57:35 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:46:11 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			dst[j] = src[j];
 			j++;
 		}
-		dst[j] = 0;//null terminating the last position of dst
+	//null terminating the last position of dst
+		dst[j] = 0;
 	}
-	return (y);//returns length of src
+	return (y);
 }

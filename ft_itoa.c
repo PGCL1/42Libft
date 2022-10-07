@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:04:30 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/04 19:53:40 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:28:13 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,11 @@ Description: Allocates (with malloc(3)) and returns a string representing the in
 
 static size_t ft_count(int n)
 {
-	size_t len; //length of the number n
+//length of the number n
+	size_t len; 
 
-	len = 1; //length will always be 1 because itoa requires at least one digit to function
+//length will always be 1 because itoa requires at least one digit to function
+	len = 1; 
 	while (n /= 10)
 		len++;
 	return (len);
@@ -41,19 +43,25 @@ char *ft_itoa(int n)
 	if (n < 0)
 	{
 		num *= -1;
-		length++; // additional space to account for - sign added
+	// additional space to account for - sign added
+		length++;
 	}	
 	str = (char *) malloc(sizeof (char) * (length + 1));
 	if (!str)
 		return (NULL);
+	//we start from the end to print the numbers
 	*(str + length) = 0;
-	while (length--) //why does it not work from below ?
+	while (length)
 	{
-		*(str + length) = num % 10 + '0'; // to get the number in str
-		num = num / 10;  //to jump to the previous number;
+	//need to bypass terminating character
+		length--;
+	// to get the number in str
+		*(str + length) = num % 10 + '0'; 
+	//to jump to the previous number;
+		num = num / 10;
 	}
 	if (n < 0)
-		*(str + 0) = '-'; //when n is negative
+	//when n is negative
+		*(str + 0) = '-';
 	return (str);
 }
-

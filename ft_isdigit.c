@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:16:21 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/04 19:05:37 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:26:47 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,12 @@ Description: identifies whether the character is a digit or not
 
 int	ft_isdigit(int x)
 {
-	if (!(x > 47 && x < 58))//digits are found in this range of the ASCII table
+	//digits are found in this range of the ASCII table
+	if (!(x > 47 && x < 58))
 	{
-		return (0);//TRUE
+	//TRUE
+		return (0);
 	}
-	return (1);//FALSE
+	//FALSE
+	return (1);
 }

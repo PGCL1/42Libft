@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 12:47:25 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:47:59 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,16 @@ char	*ft_strnstr(const char *_str, const char *to_find_, size_t len)
 	to_find = ((char *)to_find_);
 	i = 0;
 	if (to_find[0] == '\0')
-		return ((char *)str);//if to_find_ is NULL then _str is returned
+	//if to_find_ is NULL then _str is returned
+		return ((char *)str);
 	while (str[i] != 0 && i < len)
 	{
 		j = 0;
 		while (str[i + j] == to_find[j] && to_find[j] != 0)
 		{
 			if (to_find[j + 1] == 0 && (i + j) < len)
-				return (&(str[i]));//when an occurence is found, the str is returned starting from the position where the occurence started
+			//when an occurence is found, the str is returned starting from the position where the occurence started
+				return (&(str[i]));
 			j++;
 		}
 		i++;

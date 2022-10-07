@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 15:19:45 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:47:59 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ char	*ft_strrchr(const char *s, int c)
 	int	x;
 
 	x = ft_strlen(s);
-	while (x >= 0)//starting from the end, we decrement the length to find the occurence of c
+	//starting from the end, we decrement the length to find the occurence of c
+	while (x >= 0)
 	{
 		if (s[x] == (char)c)
 			return ((char *)&s[x]);

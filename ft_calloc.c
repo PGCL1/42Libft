@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:05:47 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/03 00:11:19 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:25:20 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,13 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*s;
 
-	s = (unsigned char *)malloc(count * size);//memory is allocated to count objects of size of bytes of memory
+	//memory is allocated to count objects of size of bytes of memory
+	s = (unsigned char *)malloc(count * size);
 	if (s == 0)
-		return (0);//if the allocation fails, the pointer returns NULL.
-	ft_bzero(s, count * size);//else memory is allocated and the memory is initialized with bytes of value 0.
-	return (s);//after successful memory allocation, the pointer is returned.
+	//if the allocation fails, the pointer returns NULL.
+		return (0);
+	//else memory is allocated and the memory is initialized with bytes of value 0.
+	ft_bzero(s, count * size);
+	//after successful memory allocation, the pointer is returned.
+	return (s);
 }

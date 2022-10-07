@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 16:47:48 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/05 16:27:38 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:47:48 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,17 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	if ((unsigned int)ft_strlen(s) < start)//if the length of s is smaller than start, nothing can be copied
+	//if the length of s is smaller than start, nothing can be copied
+	if ((unsigned int)ft_strlen(s) < start)
 		return (ft_strdup(""));
 	length = ft_strlen(start + s);
-	if (length < len)//if the length of s is smaller than len, then len takes the size of s
+	//if the length of s is smaller than len, then len takes the size of s
+	if (length < len)
 		len = length;
 	s1 = (char *)malloc(sizeof(char) * (len + 1));
 	if (!s1)
 		return (NULL);
-	ft_strlcpy(s1, (s + start), (len + 1));//copies the string s to s1 from position s to len + 1
+	//copies the string s to s1 from position s to len + 1
+	ft_strlcpy(s1, (s + start), (len + 1));
 	return (s1);
 }

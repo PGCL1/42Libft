@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:01:23 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/04 19:18:20 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/07 22:40:52 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ Description: copes len bytes from string src to dst. Should the two strings over
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
+	//copying src to dst if dst is smaller than src, overlapping cannot be present.
 	if (dst < src)
-		return (ft_memcpy(dst, src, len));//we first copy the src to dst if dst is smaller than src, overlapping cannot be present.
-	if (dst > src)//if dst is larger than src than the copy is done from last to first to prevent a destructive copy.
+		return (ft_memcpy(dst, src, len));
+	//if dst > src, copying is done from end to first to prevent a destructive copy.
+	if (dst > src)
 	{
 		while (len > 0)
 		{
