@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:06:22 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:26:32 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:20:01 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_isalpha(int x)
 	//Alphabetical characters are present in these two ranges
 	if (!((x >= 65 && x <= 90) || (x >= 97 && x <= 122)))
 	{
-	//TRUE
+	//FALSE
 		return (0);
 	}
-	//FALSE
+	//TRUE
 	return (1);
 }

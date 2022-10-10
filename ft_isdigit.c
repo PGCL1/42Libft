@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:16:21 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:26:47 by glacroix         ###   ########.fr       */
+/*   Updated: 2022/10/10 17:20:34 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int	ft_isdigit(int x)
 	//digits are found in this range of the ASCII table
 	if (!(x > 47 && x < 58))
 	{
-	//TRUE
+	//FALSE
 		return (0);
 	}
-	//FALSE
+	//TRUE
 	return (1);
 }
