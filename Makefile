@@ -1,5 +1,4 @@
 NAME = libft.a
-NAME1 = libft.a
 
 CC= gcc
 CFLAGS= -Wall -Wextra -Werror -I.
@@ -60,10 +59,8 @@ BONUS_OBJS = $(SRC_BONUS:.c=.o)
 
 all: $(NAME)
 
-$(NAME1): $(OBJS) $(BONUS_OBJS) 
-	ar crs $(NAME1) $(OBJS) $(BONUS_OBJS)
-
-bonus: $(NAME1)
+bonus:
+	make SRC='$(SRC) $(SRC_BONUS)'
 	
 clean: 
 	$(RM) $(OBJS) $(BONUS_OBJS)
@@ -71,6 +68,8 @@ clean:
 fclean: clean
 	$(RM) $(NAME)
 
-re: clean all
+rebonus: fclean bonus
+
+re: fclean all
 
 .PHONY: all re clean bonus rebonus fclean
