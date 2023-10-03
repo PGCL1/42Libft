@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_pow.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glacroix <glacroix@student.42madrid>       +#+  +:+       +#+        */
+/*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 14:48:19 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/03 14:48:36 by glacroix         ###   ########.fr       */
+/*   Created: 2023/07/20 16:37:00 by glacroix          #+#    #+#             */
+/*   Updated: 2023/07/20 16:44:31 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-Description: Calculate the length of a string
-*/
-
-size_t	ft_strlen(const char *str)
+double	ft_pow(double x, double y)
 {
-	size_t	x;
+	double	re;
 
-	x = 0;
-	while (str[x] != '\0')
-	{
-		x++;
-	}	
-	//length of str
-	return (x);
+	re = 1;
+	while (--y >= 0)
+		re *= x;
+	return (re);
 }

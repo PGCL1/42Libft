@@ -6,7 +6,7 @@
 #    By: glacroix <glacroix@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 12:50:33 by glacroix          #+#    #+#              #
-#    Updated: 2023/10/03 13:27:49 by glacroix         ###   ########.fr        #
+#    Updated: 2023/10/03 14:57:07 by glacroix         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ NAME = libft.a
 # **************************************************************************** #
 SRCS 	=  srcs/ft_bzero.c\
 		srcs/ft_isalnum.c\
-        srcs/ft_isalpha.c\
+        srcs/ft_isnumber.c\
+		srcs/ft_isalpha.c\
         srcs/ft_isascii.c\
         srcs/ft_isdigit.c\
         srcs/ft_isprint.c\
@@ -70,6 +71,16 @@ SRCS 	=  srcs/ft_bzero.c\
 		srcs/ft_lstclear_bonus.c\
 		srcs/ft_lstiter_bonus.c\
 		srcs/ft_lstmap_bonus.c\
+		srcs/ft_pointer.c\
+		srcs/ft_pow.c\
+		srcs/ft_printf.c\
+   		srcs/ft_putchar.c\
+		srcs/ft_putnbr.c\
+   		srcs/ft_putnbr_hex.c\
+	   	srcs/ft_putnbr_uns.c\
+	   	srcs/ft_putstr.c\
+		srcs/get_next_line_utils_bonus.c\
+		srcs/get_next_line_bonus.c\
  
 OBJS 	= $(SRCS:%.c=objs/%.o)
 

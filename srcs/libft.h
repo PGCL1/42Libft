@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:26:53 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 21:56:04 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/03 15:00:43 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,22 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <limits.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef struct s_list
 {
-	void 			*content;
-	struct s_list 	*next;
-} 					t_list;
+	void			*content;
+	struct s_list	*next;
+}				t_list;
 
+//libft functions
 void	ft_bzero(void *str, size_t n);
 int		ft_isalpha(int x);
 int		ft_isdigit(int x);
@@ -58,6 +67,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+//list functions
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -67,5 +78,22 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//printf functions
+int		ft_putchar(int c);
+int		ft_putstr(char *str);
+int		ft_putnbr(int nbr);
+int		ft_putnbr_uns(unsigned int nbr);
+int		ft_param(char format, va_list arg);
+int		ft_printf(const char *format, ...);
+int		ft_putnbr_hex(unsigned int n, char *base);
+int		ft_pointer(size_t n, char *base);
+int		ft_isnumber(char *str);
+double	ft_pow(double x, double y);
+
+//get_next_line functions
+char	*get_next_line(int fd);
+char	*ft_strjoin_gnl(char *s1, char *s2);
+size_t	ft_strlen_gnl(char *str);
 
 #endif

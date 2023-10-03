@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glacroix <glacroix@student.42madrid>       +#+  +:+       +#+        */
+/*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/03 14:48:19 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/03 14:48:36 by glacroix         ###   ########.fr       */
+/*   Created: 2022/12/09 16:35:24 by glacroix          #+#    #+#             */
+/*   Updated: 2023/10/03 14:41:07 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-Description: Calculate the length of a string
-*/
-
-size_t	ft_strlen(const char *str)
+/**
+ * It writes a single character to the standard output
+ * 
+ * @param c the character to print
+ * 
+ * @return The return value is the number of bytes written.
+ */
+int	ft_putchar(int c)
 {
-	size_t	x;
-
-	x = 0;
-	while (str[x] != '\0')
-	{
-		x++;
-	}	
-	//length of str
-	return (x);
+	return (write(1, &c, 1));
 }
