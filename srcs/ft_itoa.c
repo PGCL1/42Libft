@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 19:04:30 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:28:13 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Description: Allocates (with malloc(3)) and returns a string representing the in
 3) return result
 */
 
-#include "libft.h"
+#include "../libft.h"
 
 static size_t ft_count(int n)
 {

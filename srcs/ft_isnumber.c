@@ -6,11 +6,11 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/19 19:02:24 by glacroix          #+#    #+#             */
-/*   Updated: 2023/07/20 19:01:05 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_isnumber(char *str)
 {

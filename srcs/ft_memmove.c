@@ -6,11 +6,11 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 15:01:23 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:40:52 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 /*
 Description: copes len bytes from string src to dst. Should the two strings overlap, the copy is done in a non-destructive manner.

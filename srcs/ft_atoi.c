@@ -6,11 +6,11 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 12:05:05 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:25:40 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 /*
 Description: converts the initial portion of the string pointed to by str to int representation

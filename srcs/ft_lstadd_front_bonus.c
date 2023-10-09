@@ -6,11 +6,11 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 17:25:31 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:30:55 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 /*
 Description: Adds the node ’new’ at the beginning of the list.

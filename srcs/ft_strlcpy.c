@@ -6,11 +6,11 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 17:57:35 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:46:11 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 /*
 Description: copies up to dstsize - 1 characters from the string src to dst, NUL-terminating the result if dstsize is not 0.

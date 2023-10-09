@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 21:08:47 by glacroix          #+#    #+#             */
-/*   Updated: 2022/10/07 22:45:19 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ as first argument. Each character is passed by
 address to ’f’ to be modified if necessary.
 */
 
-#include "libft.h"
+#include "../libft.h"
 
 void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {

@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 11:26:53 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/03 15:00:43 by glacroix         ###   ########.fr       */
+/*   Updated: 2023/10/09 14:08:14 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+int		ft_isspace(int c);
 
 //list functions
 t_list	*ft_lstnew(void *content);
