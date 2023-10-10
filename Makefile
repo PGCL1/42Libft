@@ -6,7 +6,7 @@
 #    By: glacroix <glacroix@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/03 12:50:33 by glacroix          #+#    #+#              #
-#    Updated: 2023/10/03 14:57:07 by glacroix         ###   ########.fr        #
+#    Updated: 2023/10/10 11:53:06 by glacroix         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,7 +81,8 @@ SRCS 	=  srcs/ft_bzero.c\
 	   	srcs/ft_putstr.c\
 		srcs/get_next_line_utils_bonus.c\
 		srcs/get_next_line_bonus.c\
- 
+		srcs/ft_isspace.c\
+
 OBJS 	= $(SRCS:%.c=objs/%.o)
 
 #Execution
