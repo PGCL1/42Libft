@@ -6,7 +6,7 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 11:05:47 by glacroix          #+#    #+#             */
-/*   Updated: 2024/02/19 15:13:21 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 17:16:15 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count == SIZE_MAX || size == SIZE_MAX)
 		return (NULL);
-	s = (unsigned char *)malloc(count * size);
+	s = malloc(count * size);
 	if (!s)
 		return (NULL);
 	ft_bzero(s, count * size);
