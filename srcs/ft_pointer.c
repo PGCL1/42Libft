@@ -6,20 +6,12 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/10 16:35:24 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:21:19 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/**
- * It takes a number and a base, and prints the number in the base
- * 
- * @param n the number to be converted
- * @param base the base to convert to
- * 
- * @return The number of characters printed.
- */
 int	ft_pointer(size_t n, char *base)
 {
 	size_t	nbr_final[16];

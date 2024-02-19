@@ -6,26 +6,21 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 18:22:49 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 15:54:08 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
-Description: write n bytes of value c to the string str.
-*/
-
 void	*ft_memset(void *str, int c, size_t n)
 {
-	unsigned long	x;
+	unsigned long	i;
 
-	x = 0;
-	while (x < n)
+	i = 0;
+	while (i < n)
 	{
-		//starting from str[x] position are converted to c.
-		((unsigned char *)str)[x] = c;
-		x++;
+		((unsigned char *)str)[i] = c;
+		i++;
 	}	
 	return (str);
 }

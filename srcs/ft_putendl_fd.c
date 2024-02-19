@@ -6,15 +6,11 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/01 22:08:00 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 15:55:51 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
-
-/*
-Description: outputs the string ’s’ to the given file descriptor followed by a newline.
-*/
 
 void	ft_putendl_fd(char *s, int fd)
 {

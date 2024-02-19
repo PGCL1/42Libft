@@ -6,19 +6,15 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 13:14:08 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:14:12 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
-Description: converts uppercase letter into the corresponding lower-case letter
-*/
-
 int	ft_tolower(int c)
 {
-	if (c > 64 && c < 91)
+	if (c >= 'A' && c <= 'Z')
 		c += 32;
 	return (c);
 }

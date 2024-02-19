@@ -6,20 +6,13 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 17:54:49 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/09 14:01:32 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:20:24 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/**
- * It reads from a file descriptor, and stores the read data in a string
- * 
- * @param fd file descriptor
- * @param stash the string that will be returned
- * 
- * @return A pointer to a string.
- */
+//read from fd and stores read data in a string
 static char	*ft_read_n_stock(int fd, char *stash)
 {
 	int		char_read;
@@ -47,14 +40,7 @@ static char	*ft_read_n_stock(int fd, char *stash)
 	return (stash);
 }
 
-/**
- * It searches for the end of a line in the stash, and returns a pointer to the
- * beginning of the line
- * 
- * @param stash the string that contains the line to be returned
- * 
- * @return A pointer to a string.
- */
+//searches end of line, returns a pointer to the line's beginning
 static char	*search_endline(char *stash)
 {
 	int		i;
@@ -66,33 +52,28 @@ static char	*search_endline(char *stash)
 		return (NULL);
 	while (stash[i] && stash[i] != '\n')
 		i++;
-	line = malloc(sizeof(char) * (i + 2));
+	line = malloc(i + 2);
 	if (!line)
 		return (NULL);
-	j = 0;
-	while (j < i + 1)
-	{
+	j = -1;
+	while (++j < i + 1)
 		line[j] = stash[j];
-		j++;
-	}
 	line[j] = '\0';
 	return (line);
 }
 
-/**
- * It moves the position of the stash pointer to the next line
- * 
- * @param stash the string that contains the data that we want to move
- * 
- * @return a pointer to a string.
- */
+//moves the position of the stash pointer to the beginning of the next line
 static char	*move_pos_stash(char *stash)
 {
 	size_t	i;
 	size_t	j;
+	size_t	len;
 	char	*str;
 
+
 	i = 0;
+	j = 0;
+	len = ft_strlen_gnl(stash);
 	while (stash[i] && stash[i] != '\n')
 		i++;
 	while (!stash[i])
@@ -100,11 +81,10 @@ static char	*move_pos_stash(char *stash)
 		free(stash);
 		return (NULL);
 	}
-	str = malloc(sizeof(char) * (ft_strlen_gnl(stash) - i + 1));
+	str = malloc(sizeof(char) * (len - i + 1));
 	if (!str)
 		return (NULL);
 	i++;
-	j = 0;
 	while (i < ft_strlen_gnl(stash))
 		str[j++] = stash[i++];
 	str[j] = '\0';
@@ -112,13 +92,7 @@ static char	*move_pos_stash(char *stash)
 	return (str);
 }
 
-/**
- * It reads from a file descriptor, and returns a line from it
- * 
- * @param fd the file descriptor
- * 
- * @return A line of text from a file descriptor.
- */
+//reads from fd and returns the line read.
 char	*get_next_line(int fd)
 {
 	static char	*stash[OPEN_MAX];
@@ -143,6 +117,3 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/** invalid fd 
- * multiple fd 
- * read_error.txt*/
