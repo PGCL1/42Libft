@@ -6,14 +6,14 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/09 14:02:41 by glacroix          #+#    #+#             */
-/*   Updated: 2023/10/09 14:09:41 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:36:53 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isspace(int c)
+int	ft_isspace(int x)
 {
-	return (c == '\t' || c == '\n' || c == '\v' || c == '\f'
-		|| c == '\r' || c == ' ');
+	return (x == '\t' || x == '\n' || x == '\v' || x == '\f'
+		|| x == '\r' || x == ' ');
 }

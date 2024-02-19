@@ -6,15 +6,15 @@
 /*   By: glacroix <glacroix@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 15:34:07 by glacroix          #+#    #+#             */
-/*   Updated: 2024/02/19 15:14:57 by glacroix         ###   ########.fr       */
+/*   Updated: 2024/02/19 16:37:17 by glacroix         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-int	ft_isascii(int c)
+int	ft_isascii(int x)
 {
-	if (c < 0 || c > 0177)
+	if (x < 0 || x > 0177)
 		return (0);
 	return (1);
 }
